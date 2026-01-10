@@ -1,36 +1,11 @@
 import { serve } from '@hono/node-server'
-import { Hono } from 'hono'
+import app from './app.js'
 
-const app = new Hono()
-
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
-app.get('/users', (c) => {
-  return c.json({
-    message: [
-      {
-        name: 'John Doe',
-        age: 30,
-        email: 'john.doe@example.com'
-      },
-      {
-        name: 'John Doe',
-        age: 30,
-        email: 'john.doe@example.com'
-      },
-      {
-        name: 'John Doe',
-        age: 30,
-        email: 'john.doe@example.com'
-      },
-    ]
-  })
-})
+const port = 3000
 
 serve({
   fetch: app.fetch,
-  port: 3000
+  port
 }, (info) => {
-  console.log(`Server is running on http://localhost:${info.port}`)
+  console.log(`🚀 Server is running on http://localhost:${info.port}`)
 })
