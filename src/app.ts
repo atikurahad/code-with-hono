@@ -1,5 +1,7 @@
 import { Hono } from 'hono'
 import { userRoutes } from './routes/user.routes.js'
+import { contactRoutes } from './routes/contact.routes.js'
+import { aboutRoutes } from './routes/about.routes.js'
 
 const app = new Hono()
 
@@ -11,7 +13,9 @@ app.get('/', (c) => {
     })
 })
 
-// Mount user routes
+// Mount routes
 app.route('/api/users', userRoutes)
+app.route('/api/contact', contactRoutes)
+app.route('/api/about', aboutRoutes)
 
 export default app
