@@ -165,3 +165,43 @@ contactRoutes.delete('/:id', (c) => {
         data: deletedMessage
     })
 })
+// DELETE - Delete contact message
+contactRoutes.delete('/:id', (c) => {
+    const id = c.req.param('id')
+    const messageIndex = contactMessages.findIndex(msg => msg.id === id)
+
+    if (messageIndex === -1) {
+        return c.json({
+            success: false,
+            message: `Contact message with ID ${id} not found`
+        }, 404)
+    }
+
+    const deletedMessage = contactMessages.splice(messageIndex, 1)[0]
+
+    return c.json({
+        success: true,
+        message: 'Contact message deleted successfully',
+        data: deletedMessage
+    })
+})
+// DELETE - Delete contact message
+contactRoutes.delete('/:id', (c) => {
+    const id = c.req.param('id')
+    const messageIndex = contactMessages.findIndex(msg => msg.id === id)
+
+    if (messageIndex === -1) {
+        return c.json({
+            success: false,
+            message: `Contact message with ID ${id} not found`
+        }, 404)
+    }
+
+    const deletedMessage = contactMessages.splice(messageIndex, 1)[0]
+
+    return c.json({
+        success: true,
+        message: 'Contact message deleted successfully',
+        data: deletedMessage
+    })
+})
