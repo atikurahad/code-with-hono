@@ -8,7 +8,11 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
-    "hono": "^4.11.3"
+    "bcrypt": "^6.0.0",
+    "config": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "hono": "^4.11.3",
+    "jsonwebtoken": "^9.0.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
