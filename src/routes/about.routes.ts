@@ -25,7 +25,7 @@ interface TeamMember {
 
 // Initialize with default about information
 let aboutInfo: AboutInfo = {
-    companyName: 'JohnGr8 HRMS',
+    companyName: 'Employee Management System',
     mission: 'To revolutionize human resource management with innovative technology solutions.',
     vision: 'To be the leading HRMS platform trusted by organizations worldwide.',
     description: 'JohnGr8 HRMS is a comprehensive human resource management system designed to streamline HR operations and improve workforce management.',

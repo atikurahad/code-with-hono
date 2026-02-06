@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-const config = require('config')
+// const config = require('config')
 
 
 import { userRoutes } from './routes/user.routes.js'
@@ -27,6 +27,14 @@ app.get('/posts', (c) => {
     const posts = [
         { id: '1', title: 'Getting Started with Hono' },
         { id: '2', title: 'Advanced Hono Techniques' },
+        { id: '3', title: 'Hono Best Practices' },
+        { id: '4', title: 'Hono Security' },
+        { id: '5', title: 'Hono Performance' }, 
+        { id: '6', title: 'Hono Debugging' },
+        { id: '7', title: 'Hono Testing' },
+        { id: '8', title: 'Hono Deployment' },
+        { id: '9', title: 'Hono Maintenance' },
+        { id: '10', title: 'Hono Future' },
     ];
     return c.json(posts)
 })
